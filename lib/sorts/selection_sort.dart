@@ -61,6 +61,7 @@ class _SelectionSortState extends State<SelectionSort> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.black87,
         title: const Text('Selection Sort'),
@@ -68,6 +69,54 @@ class _SelectionSortState extends State<SelectionSort> {
       body: Center(
         child: Column(
           children: [
+            const SizedBox(height: 40),
+            SizedBox(
+              height: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        height: 20,
+                        width: 100,
+                        color: Colors.red,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        "First loop index of the list: $minIndex",
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 20,
+                        width: 100,
+                        color: Colors.black,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        "Smallest number found: ${myList[smallestFound]}",
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 20,
+                        width: 100,
+                        color: Colors.green,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        "Searched index: $searchedIndex",
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 40),
             Text(
               'My List: [${myList.join(', ')}]',
@@ -92,7 +141,10 @@ class _SelectionSortState extends State<SelectionSort> {
                             child: Column(
                               children: [
                                 if (smallestFound == a)
-                                  const Icon(Icons.arrow_circle_down),
+                                  const Icon(
+                                    Icons.arrow_circle_down,
+                                    size: 20,
+                                  ),
                                 const Spacer(),
                                 Container(
                                   height: 10.0 * myList[a],
