@@ -13,6 +13,7 @@ class DsaWithFlutter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DSA with Flutter',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
