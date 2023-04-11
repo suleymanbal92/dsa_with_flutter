@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'sorts/selection_sort.dart';
+import 'sorts/insertion_sort.dart';
 
 void main() {
   runApp(const DsaWithFlutter());
@@ -16,7 +16,7 @@ class DsaWithFlutter extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SelectionSort(),
+      home: const InsertionSort(),
     );
   }
 }
